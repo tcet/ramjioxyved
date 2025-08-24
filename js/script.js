@@ -15,4 +15,24 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+  // Initialize animal chamber carousel if present
+  if (document.querySelector('.animal-swiper')) {
+    new Swiper('.animal-swiper', {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      },
+      speed: 3000,
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        576: { slidesPerView: 2 },
+        992: { slidesPerView: 3 }
+      }
+    });
+  }
 });
