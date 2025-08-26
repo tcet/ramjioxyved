@@ -379,6 +379,7 @@ body {
   transform: scale(1.05);
 }
 
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
