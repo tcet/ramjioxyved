@@ -613,6 +613,7 @@ body {
   left: 50%;
   width: 4px;
   background: var(--primary-color);
+  box-shadow: 0 0 12px 0 var(--primary-color);
   transform: translateX(-50%);
 }
 
@@ -621,8 +622,8 @@ body {
   width: 100%;
   margin-bottom: 3rem;
   opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.6s ease-out;
+  transform: translateY(40px) scale(0.96);
+  transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .timeline-item::before {
@@ -633,23 +634,26 @@ body {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: var(--secondary-color);
+  background: var(--primary-color);
+  box-shadow: 0 0 8px 0 var(--primary-color);
+  border: 3px solid var(--secondary-color);
   transform: translate(-50%, -50%);
 }
 
 .timeline-item.show {
   opacity: 1;
-  transform: translate(0);
+  transform: translateY(0) scale(1);
+  box-shadow: 0 8px 24px rgba(2, 141, 174, 0.12);
 }
 
 .timeline-card {
-
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(2, 141, 174, 0.10);
   color: var(--secondary-color);
-  background: linear-gradient(135deg, #ffffff, #e0f7fa);
+  background: linear-gradient(135deg, #ffffff, var(--light-color));
   border-left: 6px solid var(--primary-color);
+  transition: box-shadow 0.3s, transform 0.3s;
 }
 
 .timeline-card img {
@@ -659,6 +663,8 @@ body {
   border-radius: 50%;
   border: 4px solid var(--primary-color);
   margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(2, 141, 174, 0.10);
+  transition: transform 0.3s;
 }
 
 @media (min-width: 768px) {
@@ -668,14 +674,14 @@ body {
 
   .timeline-item:nth-child(odd) {
     padding-right: 60px;
-    transform: translateX(-50px);
+    transform: translateX(-50px) scale(0.96);
     text-align: right;
   }
 
   .timeline-item:nth-child(even) {
     margin-left: 50%;
     padding-left: 60px;
-    transform: translateX(50px);
+    transform: translateX(50px) scale(0.96);
     text-align: left;
   }
 
@@ -712,18 +718,6 @@ body {
 }
 
 /* Alternate timeline card colours */
-.timeline-item:nth-child(4n+2) .timeline-card {
-  background: linear-gradient(135deg, #ffffff, #fff3e0);
-  border-left-color: #ff9800;
-}
 
-.timeline-item:nth-child(4n+3) .timeline-card {
-  background: linear-gradient(135deg, #ffffff, #e8f5e9);
-  border-left-color: #4caf50;
-}
-
-.timeline-item:nth-child(4n+4) .timeline-card {
-  background: linear-gradient(135deg, #ffffff, #f3e5f5);
-  border-left-color: #9c27b0;
-}
+/* Remove alternate colors for a unified theme look */
 
