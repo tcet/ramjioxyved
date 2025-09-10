@@ -45,10 +45,37 @@ body {
 .navbar-custom .nav-link {
   color: #ffffff;
   font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
 .navbar-custom .nav-link:hover {
   color: var(--primary-color);
+}
+
+.navbar-custom .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.navbar-custom .nav-link.active {
+  color: var(--primary-color);
+}
+
+.navbar-custom .nav-link.active::after {
+  width: 100%;
+  left: 0;
 }
 
 /* Header section with background image */
@@ -719,4 +746,34 @@ body {
 /* Alternate timeline card colours */
 
 /* Remove alternate colors for a unified theme look */
+
+/* Contact form styles */
+.contact-form-card {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.contact-form-card .form-control {
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form-card .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(2, 141, 174, 0.25);
+}
+
+.contact-form-card button[type="submit"] {
+  background-color: var(--primary-color);
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form-card button[type="submit"]:hover {
+  background-color: var(--secondary-color);
+}
 
