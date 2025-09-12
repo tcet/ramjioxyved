@@ -69,12 +69,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
   </nav>
 
-  <!-- Page Header -->
-  <section class="d-flex align-items-center justify-content-center" style="background: url('images/header.jpg') no-repeat center center/cover; height: 40vh; margin-top: 56px; position: relative;">
-    <div style="background-color: rgba(1,55,83,0.55); width: 100%; height: 100%; display:flex; align-items:center; justify-content:center;">
-      <h1 class="text-white display-4">Contact Us</h1>
-    </div>
-  </section>
+    <!-- Page Header -->
+    <section class="page-banner" style="background-image:url('images/header.jpg'); --banner-height:40vh;">
+      <div class="header-content">
+        <h1 class="display-4">Contact Us</h1>
+      </div>
+    </section>
 
   <!-- Contact Form Section -->
   <section class="section">

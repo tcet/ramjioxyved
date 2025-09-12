@@ -53,4 +53,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     timelineItems.forEach(item => observer.observe(item));
   }
+
+  // Parallax effect for page banners
+  document.querySelectorAll('.page-banner').forEach(banner => {
+    banner.addEventListener('mousemove', e => {
+      const rect = banner.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width - 0.5) * 10;
+      const y = ((e.clientY - rect.top) / rect.height - 0.5) * 10;
+      banner.style.backgroundPosition = `${50 + x}% ${50 + y}%`;
+    });
+    banner.addEventListener('mouseleave', () => {
+      banner.style.backgroundPosition = '';
+    });
+  });
 });
