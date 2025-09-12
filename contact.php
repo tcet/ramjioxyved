@@ -48,13 +48,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <img src="images/logo.png" alt="Ramji Oxyved Logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon" style="color:#ffffff;"></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
@@ -69,12 +69,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
   </nav>
 
-  <!-- Page Header -->
-  <section class="d-flex align-items-center justify-content-center" style="background: url('images/header.jpg') no-repeat center center/cover; height: 40vh; margin-top: 56px; position: relative;">
-    <div style="background-color: rgba(1,55,83,0.55); width: 100%; height: 100%; display:flex; align-items:center; justify-content:center;">
-      <h1 class="text-white display-4">Contact Us</h1>
-    </div>
-  </section>
+    <!-- Page Header -->
+    <section class="page-banner" style="background-image:url('images/header.jpg'); --banner-height:40vh; --banner-offset:0;">
+      <div class="header-content">
+        <h1 class="display-4">Contact Us</h1>
+      </div>
+    </section>
 
   <!-- Contact Form Section -->
   <section class="section">

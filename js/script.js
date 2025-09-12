@@ -53,4 +53,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
     timelineItems.forEach(item => observer.observe(item));
   }
+
+  // Parallax effect for page banners
+  document.querySelectorAll('.page-banner').forEach(banner => {
+    banner.addEventListener('mousemove', e => {
+      const rect = banner.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width - 0.5) * 10;
+      const y = ((e.clientY - rect.top) / rect.height - 0.5) * 10;
+      banner.style.backgroundPosition = `${50 + x}% ${50 + y}%`;
+    });
+    banner.addEventListener('mouseleave', () => {
+      banner.style.backgroundPosition = '';
+    });
+  });
+
+  // Solidify navigation bar on scroll for readability
+  const navbar = document.querySelector('.navbar-custom');
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  }
 });
