@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+
   // Solidify navigation bar on scroll for readability
   const navbar = document.querySelector('.navbar-custom');
   if (navbar) {
@@ -78,4 +79,5 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
 });
