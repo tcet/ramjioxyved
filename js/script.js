@@ -66,4 +66,18 @@ document.addEventListener('DOMContentLoaded', function () {
       banner.style.backgroundPosition = '';
     });
   });
+
+
+  // Solidify navigation bar on scroll for readability
+  const navbar = document.querySelector('.navbar-custom');
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  }
+
 });
