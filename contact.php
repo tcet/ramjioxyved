@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </nav>
 
     <!-- Page Header -->
-    <section class="page-banner" style="background-image:url('images/header.jpg'); --banner-height:40vh; --banner-offset:0;">
+    <section class="page-banner" style="background-image:url('images/header.jpg'); --banner-height:50vh; --banner-offset:0;">
       <div class="header-content">
         <h1 class="display-4">Contact Us</h1>
       </div>
