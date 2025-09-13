@@ -170,6 +170,7 @@ body {
 }
 
 /* Product cards with images */
+/* Product cards with images */
 .product-card img {
   width: 100%;
   object-fit: cover;
