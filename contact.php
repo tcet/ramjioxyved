@@ -39,6 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Contact Ramji Oxyved for inquiries about Hyperbaric Oxygen Therapy products, services, or support through our secure online form.">
   <title>Contact Us | Ramji Oxyved</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
@@ -51,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="images/logo.png" alt="Ramji Oxyved Logo">
+        <img src="images/logo.png" alt="Ramji Oxyved Logo" width="1024" height="1024">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
