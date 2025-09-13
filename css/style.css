@@ -9,6 +9,10 @@
   --light-color: #f7f9fc;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
     Arial, sans-serif;
@@ -246,12 +250,14 @@ body {
   padding: 10px 20px;
   border-radius: 4px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .button-theme:hover {
   background-color: var(--primary-color);
   color: #ffffff;
+  transform: translateY(-2px);
 }
 
 /* Override Bootstrap primary button to match site theme */
