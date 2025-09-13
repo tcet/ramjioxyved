@@ -10,11 +10,13 @@
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
   background-color: var(--light-color);
+  color: var(--secondary-color);
 }
 
 /* Navbar */
@@ -176,6 +178,22 @@ body {
   object-fit: cover;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+}
+
+.product-card h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.product-card p {
+  flex-grow: 1;
+  color: #333333;
+}
+
+.product-card .button-theme {
+  align-self: flex-start;
+  font-weight: 600;
 }
 
 /* Circle card styling for HBOT chamber configurations */
